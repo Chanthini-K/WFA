@@ -96,50 +96,50 @@ namespace WFA
         }
         private void InitilizeComboBox()
         {
-            try
-            {
-                categoriesDataset = new DataSet();
+            //    try
+            //    {
+            //        categoriesDataset = new DataSet();
 
 
-                //create a table to hold caegory data
-                DataTable categoriesTable = new DataTable("categories");
+            //        //create a table to hold caegory data
+            //        DataTable categoriesTable = new DataTable("categories");
 
-                //add columns to data table
-                categoriesTable.Columns.Add("Category id ", typeof(int));
-                categoriesTable.Columns.Add("CAtegory name ", typeof(string));
+            //        //add columns to data table
+            //        categoriesTable.Columns.Add("Category id ", typeof(int));
+            //        categoriesTable.Columns.Add("CAtegory name ", typeof(string));
 
-                //add sample rows to Datatable
-                categoriesTable.Rows.Add(1, "Electronics");
-                categoriesTable.Rows.Add(2, "Books");
+            //        //add sample rows to Datatable
+            //        categoriesTable.Rows.Add(1, "Electronics");
+            //        categoriesTable.Rows.Add(2, "Books");
 
-                //add datatable to dataset
-                categoriesDataset.Tables.Add(categoriesTable);
+            //        //add datatable to dataset
+            //        categoriesDataset.Tables.Add(categoriesTable);
 
-                ComboBox comboBoxCategories = this.comboBoxCategories;
+            //        ComboBox comboBoxCategories = this.comboBoxCategories;
 
-                if (categoriesDataset.Tables.Contains("Ccategories"))
-                {
-                    DataTable dt = categoriesDataset.Tables["Categories"];
-                    if (dt.Columns.Contains("Category ID") && dt.Columns.Contains("CategotyName"))
-                    {
-                        comboBoxCategories.DataSource = dt;
-                        comboBoxCategories.DisplayMember = "Category Name";
-                        comboBoxCategories.ValueMember = "Category ID";
-                    }
-                    else
-                    {
-                        MessageBox.Show("The required columns are missing in the data table", "Error");
-                    }
-                }
-                else
-                { 
-                    MessageBox.Show("The dataTable ' category' is not found in the dataset ", "error");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occured: {ex.Message}", "Error");
-            }
+            //        if (categoriesDataset.Tables.Contains("Ccategories"))
+            //        {
+            //            DataTable dt = categoriesDataset.Tables["Categories"];
+            //            if (dt.Columns.Contains("Category ID") && dt.Columns.Contains("CategotyName"))
+            //            {
+            //                comboBoxCategories.DataSource = dt;
+            //                comboBoxCategories.DisplayMember = "Category Name";
+            //                comboBoxCategories.ValueMember = "Category ID";
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("The required columns are missing in the data table", "Error");
+            //            }
+            //        }
+            //        else
+            //        { 
+            //            MessageBox.Show("The dataTable ' category' is not found in the dataset ", "error");
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show($"An error occured: {ex.Message}", "Error");
+            //    }
 
 
 
