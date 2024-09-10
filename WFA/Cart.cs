@@ -40,9 +40,9 @@ namespace WFA
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Proceeding to checkout");
-            //this.Close();
-            //Application.Exit(); 
+            MessageBox.Show("Proceeding to checkout");
+            this.Close();
+            Application.Exit();
         }
 
         private void rtbcartDetails_TextChanged(object sender, EventArgs e)
