@@ -73,7 +73,7 @@ namespace WFA
         {
             if (checkBoxAgree.Checked) 
             {
-                MessageBox.Show("you agreed to the terms");
+                MessageBox.Show("you agreed to the terms!!!");
             }
         }
 
